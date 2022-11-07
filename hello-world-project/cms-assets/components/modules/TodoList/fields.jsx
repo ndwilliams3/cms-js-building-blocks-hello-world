@@ -4,7 +4,6 @@ import {
   ModuleFields,
   BooleanField,
   TextField,
-  ColorField,
 } from '@hubspot/cms-components/fields';
 
 /**
@@ -22,6 +21,5 @@ export const fields = (
       />
       <BooleanField label="Todo Completed" name="completed" default={false} />
     </FieldGroup>
-    <ColorField name="button_color" default={{ color: '#F7761F' }} />
   </ModuleFields>
 );

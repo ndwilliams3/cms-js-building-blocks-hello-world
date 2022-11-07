@@ -54,7 +54,7 @@ function TodoItem({ todo, onRemove, onUpdate }) {
   );
 }
 
-function TodoList({ initialTodos = [], buttonColor }) {
+function TodoList({ initialTodos = [], buttonColor = {} }) {
   const [todoList, setTodoList] = useState(() =>
     initialTodosMapped(initialTodos),
   );

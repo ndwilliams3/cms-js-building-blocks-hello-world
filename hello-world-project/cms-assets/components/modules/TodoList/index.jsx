@@ -1,5 +1,4 @@
-import { Island } from '@hubspot/cms-components';
-import TodoList from '../../islands/TodoList.jsx?island';
+import TodoList from '../../islands/TodoList.jsx';
 import Layout from '../../Layout.jsx';
 
 /**
@@ -18,17 +17,10 @@ import Layout from '../../Layout.jsx';
  * Note: only props that can be serialized are supported
  */
 export const Component = (props) => {
-  const { default_todo: defaultTodos, button_color: buttonColor } = props;
+  const { default_todo: defaultTodos } = props;
   return (
     <Layout>
-      <Island
-        module={TodoList}
-        id="todo-list-island"
-        hydrateOn="load"
-        // TodoList props:
-        initialTodos={[defaultTodos]}
-        buttonColor={buttonColor}
-      />
+      <TodoList initialTodos={[defaultTodos]} />
     </Layout>
   );
 };
