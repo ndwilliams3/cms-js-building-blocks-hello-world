@@ -1,15 +1,10 @@
-import {
-  ModuleFields,
-  BooleanField,
-  ColorField,
-  NumberField,
-} from '@hubspot/cms-components/fields';
-
 import styles from './fancy.module.css';
 
 export const meta = {
   label: `Fancy CSS custom properties test`,
 };
+
+export { fields } from './fields.jsx';
 
 export function Component(fieldValues) {
   const { hasPurpleBorder, paddingPx, customSecondTextColor } = fieldValues;
@@ -38,19 +33,3 @@ export function Component(fieldValues) {
     </div>
   );
 }
-
-export const fields = (
-  <ModuleFields>
-    <BooleanField
-      label="Has purple border?"
-      name="hasPurpleBorder"
-      default={true}
-    />
-    <ColorField
-      label="Custom second text color"
-      name="customSecondTextColor"
-      default={{ color: 'MediumAquamarine' }}
-    />
-    <NumberField label="Padding" name="paddingPx" suffix="px" default={10} />
-  </ModuleFields>
-);
