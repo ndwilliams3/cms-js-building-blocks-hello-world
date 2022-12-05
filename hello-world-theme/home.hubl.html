@@ -7,8 +7,8 @@
 
 {% block body %}
 
-  {% js_partial
-    path="@projects/hello-world-project/cms-assets/components/partials/Home.jsx",
-    no_wrapper=True %}
+  {% js_partial path="@projects/hello-world-project/cms-assets/components/partials/Home.jsx" %}
+
+  {% js_module "CSS Prop Test Module 1" path="@projects/hello-world-project/cms-assets/components/modules/CssPropTestModule" %}
 
 {% endblock body %}
