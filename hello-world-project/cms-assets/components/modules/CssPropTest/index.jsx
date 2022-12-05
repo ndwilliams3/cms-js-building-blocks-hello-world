@@ -6,7 +6,7 @@ export const meta = {
 
 export { fields } from './fields.jsx';
 
-export function Component(fieldValues) {
+export const Component = (fieldValues) => {
   const { hasPurpleBorder, paddingPx, customSecondTextColor } = fieldValues;
 
   console.log('customSecondTextColor', customSecondTextColor);
@@ -32,4 +32,4 @@ export function Component(fieldValues) {
       <p className={styles['second-text']}>Second text</p>
     </div>
   );
-}
+};
