@@ -1,9 +1,0 @@
-.fancy-module-wrapper {}
-
-.purple-border {
-  border: 2px solid rebeccapurple;
-}
-
-.second-text {
-  color: var(--second-text-color, mediumvioletred);
-}
