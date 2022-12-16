@@ -17,10 +17,10 @@ import Layout from '../../Layout.jsx';
  * Note: only props that can be serialized are supported
  */
 export const Component = (props) => {
-  const { default_todo: defaultTodos } = props;
+  const { default_todo: defaultTodos,  complete_todo_opacity: completeTodoOpacity } = props;
   return (
     <Layout>
-      <TodoList initialTodos={[defaultTodos]} />
+      <TodoList initialTodos={[defaultTodos]}  completeTodoOpacity={completeTodoOpacity} />
     </Layout>
   );
 };
