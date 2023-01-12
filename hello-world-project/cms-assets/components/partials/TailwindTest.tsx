@@ -1,14 +1,8 @@
-import SomeToggleSwitch from '../islands/SomeToggleSwitch.jsx';
-// import SomeToggleSwitchIsland from '../islands/SomeToggleSwitch.jsx?island';
+// import SomeToggleSwitch from '../islands/SomeToggleSwitch.jsx';
+import SomeToggleSwitchIsland from '../islands/SomeToggleSwitch.jsx?island';
 import { Island } from '@hubspot/cms-components';
 
-import React from 'react';
-
-React.thingie ??= '::: set in CUSTOMER partial :::';
-
 import '../../styles/tailwindbase.css';
-
-console.log('React.thingie inside customer partial code', React.thingie);
 
 const people = [
   {
@@ -46,12 +40,11 @@ export default function Example() {
         ))}
       </ul>
 
-      {/* <Island
+      <Island
         module={SomeToggleSwitchIsland}
         id="custom-id"
         defaultChecked={false}
-      /> */}
-      <SomeToggleSwitch />
+      />
     </>
   );
 }
