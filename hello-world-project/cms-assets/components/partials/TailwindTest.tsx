@@ -2,7 +2,7 @@
 import SomeToggleSwitchIsland from '../islands/SomeToggleSwitch.jsx?island';
 import { Island } from '@hubspot/cms-components';
 
-import '../../styles/tailwindbase.css';
+import '../../styles/tailwind.css';
 
 const people = [
   {
