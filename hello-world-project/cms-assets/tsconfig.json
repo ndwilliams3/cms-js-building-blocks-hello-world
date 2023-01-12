@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "NodeNext",
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "types": ["vite/client"]
+  },
+  "include": ["components/**/*"],
+  "exclude": ["node_modules"]
+}
