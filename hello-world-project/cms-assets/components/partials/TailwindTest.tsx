@@ -5,7 +5,7 @@ import BookOpenIcon from '@heroicons/react/24/solid/esm/BookOpenIcon.js';
 
 import calvinImg from '../../assets/calvin.jpeg';
 import kristenImg from '../../assets/kristen.jpeg';
-import tedImg from '../../assets/ted.jpeg';
+import tedImg from '../../assets/Ted.jpeg';
 import '../../styles/tailwind.css';
 
 const people = [
