@@ -1,6 +1,7 @@
 // import SomeToggleSwitch from '../islands/SomeToggleSwitch.jsx';
 import SomeToggleSwitchIsland from '../islands/SomeToggleSwitch.jsx?island';
 import { Island } from '@hubspot/cms-components';
+import BookOpenIcon from '@heroicons/react/24/solid/esm/BookOpenIcon.js';
 
 import '../../styles/tailwind.css';
 
@@ -45,6 +46,13 @@ export default function Example() {
         id="custom-id"
         defaultChecked={false}
       />
+
+      <dl>
+        <dt>BookOpen</dt>
+        <dd>
+          <BookOpenIcon width={200} />
+        </dd>
+      </dl>
     </>
   );
 }
