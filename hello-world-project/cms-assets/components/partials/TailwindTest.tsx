@@ -3,26 +3,26 @@ import SomeToggleSwitchIsland from '../islands/SomeToggleSwitch.jsx?island';
 import { Island } from '@hubspot/cms-components';
 import BookOpenIcon from '@heroicons/react/24/solid/esm/BookOpenIcon.js';
 
+import calvinImg from '../../assets/calvin.jpeg';
+import kristenImg from '../../assets/kristen.jpeg';
+import tedImg from '../../assets/ted.jpeg';
 import '../../styles/tailwind.css';
 
 const people = [
   {
     name: 'Calvin Hawkins',
     email: 'calvin.hawkins@example.com',
-    image:
-      'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    image: `${calvinImg}?name=calvin&width=150`,
   },
   {
     name: 'Kristen Ramos',
     email: 'kristen.ramos@example.com',
-    image:
-      'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    image: `${kristenImg}?name=kristen&width=150`,
   },
   {
     name: 'Ted Fox',
     email: 'ted.fox@example.com',
-    image:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    image: `${tedImg}?name=ted&width=150`,
   },
 ];
 
