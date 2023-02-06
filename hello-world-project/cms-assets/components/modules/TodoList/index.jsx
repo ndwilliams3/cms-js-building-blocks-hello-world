@@ -1,4 +1,4 @@
-import { Island } from '@hubspot/cms-components';
+import { Island, BasicSharedState } from '@hubspot/cms-components';
 import TodoList from '../../islands/TodoList.jsx?island';
 import Layout from '../../Layout.jsx';
 
@@ -23,18 +23,52 @@ export const Component = (props) => {
     button_color: buttonColor,
     complete_todo_opacity: completeTodoOpacity,
   } = props;
+
   return (
+    // <BasicSharedState value={['a', 'b', 'c']}>
     <Layout>
-      <Island
-        module={TodoList}
-        id="todo-list-island"
-        hydrateOn="load"
-        // TodoList props:
-        initialTodos={[defaultTodos]}
-        buttonColor={buttonColor}
-        completeTodoOpacity={completeTodoOpacity}
-      />
+      <BasicSharedState value={['a', 'b', 'c']}>
+        <Island
+          module={TodoList}
+          id="todo-list-island"
+          hydrateOn="load"
+          // TodoList props:
+          initialTodos={[defaultTodos]}
+          buttonColor={buttonColor}
+          completeTodoOpacity={completeTodoOpacity}
+        />
+        <Island
+          module={TodoList}
+          id="todo-list-island2"
+          hydrateOn="load"
+          // TodoList props:
+          initialTodos={[defaultTodos]}
+          buttonColor={buttonColor}
+          completeTodoOpacity={completeTodoOpacity}
+        />
+      </BasicSharedState>
+      <BasicSharedState value={['x', 'y', 'z']}>
+        <Island
+          module={TodoList}
+          id="todo-list-island3"
+          hydrateOn="load"
+          // TodoList props:
+          initialTodos={[defaultTodos]}
+          buttonColor={buttonColor}
+          completeTodoOpacity={completeTodoOpacity}
+        />
+        <Island
+          module={TodoList}
+          id="todo-list-island4"
+          hydrateOn="load"
+          // TodoList props:
+          initialTodos={[defaultTodos]}
+          buttonColor={buttonColor}
+          completeTodoOpacity={completeTodoOpacity}
+        />
+      </BasicSharedState>
     </Layout>
+    // </BasicSharedState>
   );
 };
 export { fields } from './fields.jsx';

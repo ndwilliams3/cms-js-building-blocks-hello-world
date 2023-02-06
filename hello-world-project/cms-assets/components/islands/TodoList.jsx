@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useBasicSharedState } from '@hubspot/cms-components';
 
 import Button from './Button.jsx';
 import styles from '../../styles/todo.module.css';
@@ -64,6 +65,8 @@ function TodoItem({ todo, onRemove, onUpdate }) {
 }
 
 function TodoList({ initialTodos = [], buttonColor, completeTodoOpacity }) {
+  const [sharedState, updateSharedState] = useBasicSharedState();
+
   const [todoList, setTodoList] = useState(() =>
     initialTodosMapped(initialTodos),
   );
@@ -75,6 +78,7 @@ function TodoList({ initialTodos = [], buttonColor, completeTodoOpacity }) {
     id += 1;
 
     setTodoList([...todoList, todo].sort(todoSortByCompleted));
+    updateSharedState((prevState) => [...prevState, todo.text]);
   };
 
   const handleRemoveTodo = (todoId) => {
@@ -153,6 +157,8 @@ function TodoList({ initialTodos = [], buttonColor, completeTodoOpacity }) {
           />
         ))}
       </ul>
+
+      <h5>{JSON.stringify(sharedState)}</h5>
     </div>
   );
 }
