@@ -65,7 +65,7 @@ function TodoItem({ todo, onRemove, onUpdate }) {
 }
 
 function TodoList({ initialTodos = [], buttonColor, completeTodoOpacity }) {
-  const [sharedState, updateSharedState] = useBasicSharedState();
+  const [sharedState, updateSharedState, sharedStateID] = useBasicSharedState();
 
   const [todoList, setTodoList] = useState(() =>
     initialTodosMapped(initialTodos),
@@ -116,6 +116,8 @@ function TodoList({ initialTodos = [], buttonColor, completeTodoOpacity }) {
     '--todo-complete-opacity': completeTodoOpacity / 100,
   };
 
+  console.log('rendering todo list with', { sharedStateID, sharedState });
+
   return (
     <div className={styles.todoListContainer} style={customCssProperties}>
       <div className={styles.toDoForm}>
@@ -158,7 +160,9 @@ function TodoList({ initialTodos = [], buttonColor, completeTodoOpacity }) {
         ))}
       </ul>
 
-      <h5>{JSON.stringify(sharedState)}</h5>
+      <h5>
+        Shared state for {sharedStateID} {JSON.stringify(sharedState)}
+      </h5>
     </div>
   );
 }
