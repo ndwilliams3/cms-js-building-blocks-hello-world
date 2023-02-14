@@ -4,12 +4,11 @@ import IndependentSharedStateModifer from '../islands/IndependentSharedStateModi
 export default function OtherSharedStateChangers({ sharedStateIDs }) {
   return (
     <div>
-      {sharedStateIDs.map((id, i) => {
-        const emptyValue = {}; // intentionally empty
-
+      {sharedStateIDs.map((id) => {
         return (
-          <BasicSharedState id={id} value={emptyValue} key={id}>
+          <BasicSharedState id={id} key={id}>
             <Island
+              id={`changer-${id}`}
               module={IndependentSharedStateModifer}
               wrapperStyle={{ marginTop: '1em' }}
             />

@@ -1,4 +1,4 @@
-import { Island, BasicSharedState } from '@hubspot/cms-components';
+import { Island } from '@hubspot/cms-components';
 import TodoList from '../../islands/TodoList.jsx?island';
 import Layout from '../../Layout.jsx';
 
@@ -25,106 +25,17 @@ export const Component = (props) => {
   } = props;
 
   return (
-    // <BasicSharedState value={['a', 'b', 'c']}>
     <Layout>
-      <BasicSharedState id="top" value={['a', 'b', 'c']}>
-        <Island
-          module={TodoList}
-          id="todo-list-island"
-          hydrateOn="load"
-          // TodoList props:
-          initialTodos={[defaultTodos]}
-          buttonColor={buttonColor}
-          completeTodoOpacity={completeTodoOpacity}
-        />
-        <Island
-          module={TodoList}
-          id="todo-list-island2"
-          hydrateOn="load"
-          // TodoList props:
-          initialTodos={[defaultTodos]}
-          buttonColor={buttonColor}
-          completeTodoOpacity={completeTodoOpacity}
-        />
-      </BasicSharedState>
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-
-      <BasicSharedState id="middle" value={['x', 'y', 'z']}>
-        <Island
-          module={TodoList}
-          id="todo-list-island3"
-          hydrateOn="load"
-          // TodoList props:
-          initialTodos={[defaultTodos]}
-          buttonColor={buttonColor}
-          completeTodoOpacity={completeTodoOpacity}
-        />
-        <Island
-          module={TodoList}
-          id="todo-list-island4"
-          hydrateOn="load"
-          // TodoList props:
-          initialTodos={[defaultTodos]}
-          buttonColor={buttonColor}
-          completeTodoOpacity={completeTodoOpacity}
-        />
-      </BasicSharedState>
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-
-      <BasicSharedState id="bottom-visible" value={['j', 'k', 'l']}>
-        <Island
-          module={TodoList}
-          id="todo-list-island5"
-          hydrateOn="visible"
-          // TodoList props:
-          initialTodos={[defaultTodos]}
-          buttonColor={buttonColor}
-          completeTodoOpacity={completeTodoOpacity}
-        />
-        <Island
-          module={TodoList}
-          id="todo-list-island6"
-          hydrateOn="visible"
-          // TodoList props:
-          initialTodos={[defaultTodos]}
-          buttonColor={buttonColor}
-          completeTodoOpacity={completeTodoOpacity}
-        />
-      </BasicSharedState>
+      <Island
+        module={TodoList}
+        id="todo-list-island"
+        hydrateOn="load"
+        // TodoList props:
+        initialTodos={[defaultTodos]}
+        buttonColor={buttonColor}
+        completeTodoOpacity={completeTodoOpacity}
+      />
     </Layout>
-    // </BasicSharedState>
   );
 };
 export { fields } from './fields.jsx';

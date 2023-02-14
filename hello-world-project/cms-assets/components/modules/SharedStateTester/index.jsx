@@ -102,6 +102,7 @@ export const Component = (props) => {
     </>
   );
 };
+
 export { fields } from './fields.jsx';
 export const meta = {
   label: `Shared state tester`,

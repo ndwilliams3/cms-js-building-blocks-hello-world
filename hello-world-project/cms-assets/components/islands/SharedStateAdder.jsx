@@ -27,17 +27,20 @@ function SharedStateAdder(props) {
         Shared state for {sharedStateID} {JSON.stringify(sharedState)}
       </h5>
 
-      <input
-        placeholder="Push on to shared state..."
-        value={buffer}
-        onInput={handleBufferInput}
-        onKeyDown={handleBufferKeyDown}
-        style={{ width: '15em', marginRight: '1em' }}
-      />
+      <form autoComplete="off">
+        <input
+          placeholder="Push on to shared state..."
+          autoComplete="off"
+          value={buffer}
+          onInput={handleBufferInput}
+          onKeyDown={handleBufferKeyDown}
+          style={{ width: '15em', marginRight: '1em' }}
+        />
 
-      <button onClick={handleAddToSharedState} disabled={!buffer}>
-        Add
-      </button>
+        <button onClick={handleAddToSharedState} disabled={!buffer}>
+          Add
+        </button>
+      </form>
     </div>
   );
 }
