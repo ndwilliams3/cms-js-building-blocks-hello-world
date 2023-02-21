@@ -1,7 +1,15 @@
 import { useState } from 'react';
+import { css } from 'goober';
+
+import BeakerIcon from '@heroicons/react/24/solid/esm/BeakerIcon';
 
 import Button from './Button.jsx';
 import styles from '../../styles/todo.module.css';
+
+const DivClass = css`
+  color: red;
+  background: green;
+`;
 
 let id = 0;
 const todoSortByCompleted = (todoA, todoB) => {
@@ -97,6 +105,9 @@ function TodoList({ initialTodos = [], buttonColor }) {
 
   return (
     <div className={styles.todoListContainer}>
+      <BeakerIcon className="h-3 w-3 text-blue-500" />
+      <div className={DivClass}>Hello Goober</div>
+
       <div className={styles.toDoForm}>
         <input
           className={styles.todoInput}
