@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { useBasicSharedState } from '@hubspot/cms-components';
+import { useSharedIslandState } from '@hubspot/cms-components';
 
-function SharedStateAdder(props) {
-  const [sharedState, updateSharedState, sharedStateID] = useBasicSharedState();
+function SharedStateAdder() {
+  const [sharedState, updateSharedState, sharedStateID] =
+    useSharedIslandState();
 
   const [buffer, setBuffer] = useState('');
 

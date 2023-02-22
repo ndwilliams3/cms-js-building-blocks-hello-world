@@ -1,4 +1,4 @@
-import { Island, BasicSharedState } from '@hubspot/cms-components';
+import { Island, SharedIslandState } from '@hubspot/cms-components';
 import SharedStateAdderIsland from '../../islands/SharedStateAdder.jsx?island';
 
 function SetOfIslands({ prefix, num, sharedStateID, hydrateOn }) {
@@ -25,19 +25,17 @@ export const Component = (props) => {
     renderBottom,
   } = props;
 
-  console.log('SharedStateTester render', props);
-
   return (
     <>
       {renderTop ? (
-        <BasicSharedState id="top" value={['a', 'b', 'c']}>
+        <SharedIslandState id="top" value={['a', 'b', 'c']}>
           <SetOfIslands
             prefix={island_prefix}
             num={num_island_per_state}
             sharedStateID="top"
             hydrateOn="load"
           />
-        </BasicSharedState>
+        </SharedIslandState>
       ) : (
         <h4>No Top</h4>
       )}
@@ -58,14 +56,14 @@ export const Component = (props) => {
       <br />
       <br />
       {renderMiddle ? (
-        <BasicSharedState id="middle" value={['j', 'k', 'l']}>
+        <SharedIslandState id="middle" value={['j', 'k', 'l']}>
           <SetOfIslands
             prefix={island_prefix}
             num={num_island_per_state}
             sharedStateID="middle"
             hydrateOn="load"
           />
-        </BasicSharedState>
+        </SharedIslandState>
       ) : (
         <h4>No Middle</h4>
       )}
@@ -88,14 +86,14 @@ export const Component = (props) => {
       <br />
 
       {renderBottom ? (
-        <BasicSharedState id="bottom" value={['x', 'y', 'z']}>
+        <SharedIslandState id="bottom" value={['x', 'y', 'z']}>
           <SetOfIslands
             prefix={island_prefix}
             num={num_island_per_state}
             sharedStateID="bottom"
             hydrateOn="visible"
           />
-        </BasicSharedState>
+        </SharedIslandState>
       ) : (
         <h4>No Buttom</h4>
       )}

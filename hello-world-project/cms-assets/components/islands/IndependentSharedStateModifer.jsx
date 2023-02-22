@@ -1,7 +1,7 @@
-import { useBasicSharedState } from '@hubspot/cms-components';
+import { useSharedIslandState } from '@hubspot/cms-components';
 
 export default function IndependentSharedStateModifer() {
-  const [, updateSharedState, sharedStateID] = useBasicSharedState();
+  const [, updateSharedState, sharedStateID] = useSharedIslandState();
 
   const addTimestamp = () => {
     updateSharedState((prev) => {

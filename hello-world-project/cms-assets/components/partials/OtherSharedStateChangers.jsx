@@ -1,4 +1,4 @@
-import { Island, BasicSharedState } from '@hubspot/cms-components';
+import { Island, SharedIslandState } from '@hubspot/cms-components';
 import IndependentSharedStateModifer from '../islands/IndependentSharedStateModifer.jsx?island';
 
 export default function OtherSharedStateChangers({ sharedStateIDs }) {
@@ -6,13 +6,13 @@ export default function OtherSharedStateChangers({ sharedStateIDs }) {
     <div>
       {sharedStateIDs.map((id) => {
         return (
-          <BasicSharedState id={id} key={id}>
+          <SharedIslandState id={id} key={id}>
             <Island
               id={`changer-${id}`}
               module={IndependentSharedStateModifer}
               wrapperStyle={{ marginTop: '1em' }}
             />
-          </BasicSharedState>
+          </SharedIslandState>
         );
       })}
     </div>
