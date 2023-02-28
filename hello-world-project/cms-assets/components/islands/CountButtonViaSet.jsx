@@ -1,7 +1,7 @@
 import { useSharedIslandState } from '@hubspot/cms-components';
 
 export default function CountButtonViaSet({ incrementBy = 0 }) {
-  const [sharedState, setState] = useSharedIslandState();
+  const [sharedState, setState, sharedStateID] = useSharedIslandState();
 
   return (
     <>
@@ -14,9 +14,10 @@ export default function CountButtonViaSet({ incrementBy = 0 }) {
           }))
         }
       >
-        Increment by {incrementBy}
+        Increment by {incrementBy} (via setState with function)
       </button>
 
+      <p>Shared state ID: {sharedStateID}</p>
       <p>count: {sharedState.count}</p>
       <p>steps: {sharedState.totalSteps}</p>
     </>
